@@ -9,10 +9,10 @@ import {
   View,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import AIcon from "react-native-vector-icons/AntDesign";
-import EIcon from "react-native-vector-icons/Entypo";
 import React, { useState } from "react";
 import intro from "../Data/intro";
+import Dots from "../components/Intro/Dots";
+import Button from "../components/Intro/Button";
 
 const FeatureScreen = () => {
   const [page, setPage] = useState(0);
@@ -66,56 +66,6 @@ const FeatureScreen = () => {
   );
 };
 
-const Button = ({ type, page }) => {
-  return (
-    <View style={styles.button(type)}>
-      <Text
-        style={{
-          color: "white",
-          fontWeight: "800",
-          opacity:
-            type === "left"
-              ? page === 0
-                ? 0.5
-                : 1
-              : type === "right"
-              ? page === 2
-                ? 0.5
-                : 1
-              : 1,
-        }}
-      >
-        {type === "right" ? "Next" : "Prev"}
-      </Text>
-      <AIcon name={type} size={30} color="#fff" />
-    </View>
-  );
-};
-
-const Dots = ({ page }) => {
-  return (
-    <View style={{ flexDirection: "row", alignItems: "center" }}>
-      <EIcon
-        name="dot-single"
-        style={{ marginRight: 5 }}
-        size={page === 0 ? 50 : 30}
-        color="#fff"
-      />
-      <EIcon
-        name="dot-single"
-        style={{ marginRight: 5 }}
-        size={page === 1 ? 50 : 30}
-        color="#fff"
-      />
-      <EIcon
-        name="dot-single"
-        style={{ marginRight: 5 }}
-        size={page === 2 ? 50 : 30}
-        color="#fff"
-      />
-    </View>
-  );
-};
 export default FeatureScreen;
 
 const styles = StyleSheet.create({
@@ -150,8 +100,4 @@ const styles = StyleSheet.create({
     right: 15,
     left: 15,
   },
-  button: (type) => ({
-    flexDirection: type == "right" ? "row" : "row-reverse",
-    alignItems: "center",
-  }),
 });
