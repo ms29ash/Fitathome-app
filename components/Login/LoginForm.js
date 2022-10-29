@@ -31,7 +31,7 @@ const LoginForm = () => {
       >
         <MyText style={styles.forgotPassword}>Forgot password?</MyText>
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("HomeScreen")}>
         <MyText fontWeight="Bold" style={styles.button}>
           Sign in
         </MyText>
@@ -60,7 +60,7 @@ export default LoginForm;
 const styles = StyleSheet.create({
   heading: {
     color: "#bf0404",
-    fontSize: 25,
+    fontSize: 20,
     width: "100%",
     textAlign: "left",
     marginBottom: 30,

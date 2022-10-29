@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: "white",
-    fontSize: 20,
+    fontSize: 18,
     marginTop: 80,
   },
   buttons: {
