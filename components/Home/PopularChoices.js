@@ -3,12 +3,13 @@ import React from "react";
 import { popularItems } from "../../Data/items";
 import MyText from "../MyText";
 import PopularChoiceCard from "./PopularChoiceCard";
+import Heading from "./Heading";
 
 const PopularChoices = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <MyText style={styles.heading}>Popular Choices</MyText>
+        <Heading style={styles.head}>Popular Choices</Heading>
         <TouchableOpacity>
           <MyText>show all</MyText>
         </TouchableOpacity>
@@ -35,8 +36,8 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     marginTop: 10,
   },
-  heading: {
-    fontSize: 20,
-    fontWeight: "bold",
+  head: {
+    marginBottom: 0,
+    marginTop: 0,
   },
 });

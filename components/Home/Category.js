@@ -1,6 +1,8 @@
 import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
 import React from "react";
 import MyText from "../MyText";
+import Heading from "./Heading";
+
 const category = [
   {
     name: "Veg",
@@ -25,9 +27,7 @@ const category = [
 const Category = () => {
   return (
     <View>
-      <MyText style={{ fontSize: 20 }} fontWeight="Bold">
-        Category
-      </MyText>
+      <Heading>Category</Heading>
 
       <View style={styles.container}>
         {category.map((item, index) => (
@@ -54,19 +54,21 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     alignItems: "center",
-    marginTop: 20,
     flexWrap: "wrap",
   },
   wrapper: {
-    margin: 5,
-    width: "47%",
+    margin: 3,
+    width: "23%",
     backgroundColor: "#f2f2f2",
-    flexDirection: "row",
     alignItems: "center",
-    padding: 10,
+    paddingHorizontal: 6,
     borderRadius: 15,
+    alignItems: "center",
+    justifyContent: "center",
+    paddingVertical: 10,
   },
   text: {
     marginLeft: 10,
+    fontSize: 10,
   },
 });

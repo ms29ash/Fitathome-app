@@ -17,7 +17,7 @@ const HomeScreen = () => {
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
-        <Search />
+        <Header />
         <ScrollView showsVerticalScrollIndicator={false}>
           <PopularChoices />
           <Divider color="#f2f2f2" orientation="horizontal" width={1} />
