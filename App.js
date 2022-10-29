@@ -22,7 +22,7 @@ export default function App() {
   }
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="LoadingScreen">
+      <Stack.Navigator initialRouteName="HomeScreen">
         <Stack.Screen
           name="LoadingScreen"
           component={LoadingScreen}
@@ -46,6 +46,11 @@ export default function App() {
         <Stack.Screen
           name="ForgotPasswordScreen"
           component={ForgotPasswordScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="HomeScreen"
+          component={HomeScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
