@@ -15,7 +15,9 @@ const ForgotPasswordScreen = ({ navigation }) => {
     <SafeAreaView style={styles.container}>
       <Image style={styles.logo} source={require("../assets/logo192.png")} />
       <View style={{ width: "85%" }}>
-        <MyText style={styles.heading}>Forgot Password</MyText>
+        <MyText fontWeight="Bold" style={styles.heading}>
+          Forgot Password
+        </MyText>
 
         <MyText
           style={{
@@ -39,7 +41,9 @@ const ForgotPasswordScreen = ({ navigation }) => {
         />
 
         <TouchableOpacity>
-          <MyText style={styles.button}>Continue</MyText>
+          <MyText fontWeight="Bold" style={styles.button}>
+            Continue
+          </MyText>
         </TouchableOpacity>
 
         <View
@@ -50,9 +54,9 @@ const ForgotPasswordScreen = ({ navigation }) => {
             marginTop: 20,
           }}
         >
-          <MyText>Already have an account? </MyText>
+          <MyText style={{ fontSize: 12 }}>Already have an account? </MyText>
           <TouchableOpacity onPress={() => navigation.navigate("LoginScreen")}>
-            <MyText style={{ color: "#bf0404", fontWeight: "600" }}>
+            <MyText fontWeight="SemiBold" style={{ color: "#bf0404" }}>
               Sign in
             </MyText>
           </TouchableOpacity>
@@ -80,8 +84,7 @@ const styles = StyleSheet.create({
   },
   heading: {
     color: "#bf0404",
-    fontSize: 25,
-    fontWeight: "bold",
+    fontSize: 23,
     width: "100%",
     textAlign: "left",
     marginBottom: 30,

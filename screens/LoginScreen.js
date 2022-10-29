@@ -25,7 +25,9 @@ const LoginScreen = () => {
             style={styles.optImg}
             source={{ uri: "https://img.icons8.com/color/344/google-logo.png" }}
           />
-          <MyText style={styles.optText}>Google</MyText>
+          <MyText fontWeight="Medium" style={styles.optText}>
+            Google
+          </MyText>
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.signInOpt, { borderColor: "#4267B2" }]}
@@ -36,7 +38,9 @@ const LoginScreen = () => {
               uri: "https://img.icons8.com/fluency/344/facebook-new.png",
             }}
           />
-          <MyText style={[styles.optText, {}]}>Facebook</MyText>
+          <MyText fontWeight="Medium" style={styles.optText}>
+            Facebook
+          </MyText>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
@@ -72,7 +76,6 @@ const styles = StyleSheet.create({
   optText: {
     textAlign: "center",
     width: "100%",
-    fontWeight: "600",
   },
   optImg: {
     width: 30,

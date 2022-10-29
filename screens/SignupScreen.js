@@ -15,7 +15,9 @@ const SignupScreen = ({ navigation }) => {
     <SafeAreaView style={styles.container}>
       <Image style={styles.logo} source={require("../assets/logo192.png")} />
       <View style={{ width: "85%" }}>
-        <MyText style={styles.heading}>Create your{"\n"}account</MyText>
+        <MyText fontWeight="Bold" style={styles.heading}>
+          Create your{"\n"}account
+        </MyText>
 
         <TextInput
           placeholder="Email"
@@ -42,7 +44,9 @@ const SignupScreen = ({ navigation }) => {
           style={styles.textInput}
         />
         <TouchableOpacity>
-          <MyText style={styles.button}>Sign up</MyText>
+          <MyText fontWeight="Bold" style={styles.button}>
+            Sign up
+          </MyText>
         </TouchableOpacity>
         <MyText
           style={{
@@ -63,9 +67,9 @@ const SignupScreen = ({ navigation }) => {
             marginTop: 20,
           }}
         >
-          <MyText>Already have an account? </MyText>
+          <MyText style={{ fontSize: 12 }}>Already have an account? </MyText>
           <TouchableOpacity onPress={() => navigation.navigate("LoginScreen")}>
-            <MyText style={{ color: "#bf0404", fontWeight: "600" }}>
+            <MyText fontWeight="SemiBold" style={{ color: "#bf0404" }}>
               Sign in
             </MyText>
           </TouchableOpacity>
@@ -93,7 +97,6 @@ const styles = StyleSheet.create({
   heading: {
     color: "#bf0404",
     fontSize: 25,
-    fontWeight: "bold",
     width: "100%",
     textAlign: "left",
     marginBottom: 30,

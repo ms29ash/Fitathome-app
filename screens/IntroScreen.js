@@ -1,5 +1,4 @@
 import {
-  Image,
   ImageBackground,
   SafeAreaView,
   StatusBar,
@@ -31,13 +30,15 @@ const FeatureScreen = ({ navigation }) => {
             start={{ x: 0, y: 0.1 }}
             end={{ x: 0, y: 0.2 }}
           >
-            <MyText style={styles.title}>{intro[page].title}</MyText>
+            <MyText fontWeight="Bold" style={styles.title}>
+              {intro[page].title}
+            </MyText>
             <MyText
               style={{
                 color: "white",
                 marginTop: 10,
-                fontFamily: "Montserrat",
                 height: "40%",
+                fontSize: 12,
               }}
             >
               {intro[page].description}
@@ -89,8 +90,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: "white",
-    fontWeight: "800",
-    fontSize: 25,
+    fontSize: 20,
     marginTop: 80,
   },
   buttons: {

@@ -1,18 +1,15 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  TextInput,
-  TouchableOpacity,
-} from "react-native";
+import { StyleSheet, View, TextInput, TouchableOpacity } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
+import MyText from "../MyText";
 
 const LoginForm = () => {
   const navigation = useNavigation();
   return (
     <View style={{ width: "85%" }}>
-      <Text style={styles.heading}>Log in to your{"\n"}account</Text>
+      <MyText fontWeight="Bold" style={styles.heading}>
+        Log in to your{"\n"}account
+      </MyText>
       <TextInput
         placeholder="Email"
         autoCapitalize="none"
@@ -32,10 +29,12 @@ const LoginForm = () => {
       <TouchableOpacity
         onPress={() => navigation.navigate("ForgotPasswordScreen")}
       >
-        <Text style={styles.forgotPassword}>Forgot password?</Text>
+        <MyText style={styles.forgotPassword}>Forgot password?</MyText>
       </TouchableOpacity>
       <TouchableOpacity>
-        <Text style={styles.button}>Sign in</Text>
+        <MyText fontWeight="Bold" style={styles.button}>
+          Sign in
+        </MyText>
       </TouchableOpacity>
       <View
         style={{
@@ -45,9 +44,11 @@ const LoginForm = () => {
           marginTop: 20,
         }}
       >
-        <Text>Don't have an account? </Text>
+        <MyText style={{ fontSize: 12 }}>Don't have an account? </MyText>
         <TouchableOpacity onPress={() => navigation.navigate("SignupScreen")}>
-          <Text style={{ color: "#bf0404", fontWeight: "600" }}>Signup</Text>
+          <MyText fontWeight="SemiBold" style={{ color: "#bf0404" }}>
+            Signup
+          </MyText>
         </TouchableOpacity>
       </View>
     </View>
@@ -60,7 +61,6 @@ const styles = StyleSheet.create({
   heading: {
     color: "#bf0404",
     fontSize: 25,
-    fontWeight: "bold",
     width: "100%",
     textAlign: "left",
     marginBottom: 30,
@@ -79,6 +79,7 @@ const styles = StyleSheet.create({
   forgotPassword: {
     color: "#bf0404",
     textAlign: "right",
+    fontSize: 12,
   },
   button: {
     backgroundColor: "#bf0404",

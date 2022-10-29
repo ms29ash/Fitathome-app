@@ -1,19 +1,20 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import React from "react";
 import AIcon from "react-native-vector-icons/AntDesign";
+import MyText from "../MyText";
 
 const Button = ({ type, page }) => {
   return (
     <View style={styles.button(type)}>
-      <Text
+      <MyText
+        fontWeight="Bold"
         style={{
           color: "white",
-          fontWeight: "800",
           opacity: type === "left" ? (page === 0 ? 0.5 : 1) : 1,
         }}
       >
         {type === "right" ? "Next" : "Prev"}
-      </Text>
+      </MyText>
       <AIcon name={type} size={30} color="#fff" />
     </View>
   );
