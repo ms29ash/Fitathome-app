@@ -3,13 +3,13 @@ import {
   SafeAreaView,
   StatusBar,
   StyleSheet,
-  Text,
   TextInput,
   TouchableOpacity,
   View,
 } from "react-native";
 import React from "react";
 import LoginForm from "../components/Login/LoginForm";
+import MyText from "../components/MyText";
 
 const LoginScreen = () => {
   return (
@@ -19,13 +19,13 @@ const LoginScreen = () => {
       <LoginForm />
 
       <View style={styles.wrapper}>
-        <Text style={{ textAlign: "center" }}>Sign in with</Text>
+        <MyText style={{ textAlign: "center" }}>Sign in with</MyText>
         <TouchableOpacity style={[styles.signInOpt, { borderColor: "f2f2f2" }]}>
           <Image
             style={styles.optImg}
             source={{ uri: "https://img.icons8.com/color/344/google-logo.png" }}
           />
-          <Text style={styles.optText}>Google</Text>
+          <MyText style={styles.optText}>Google</MyText>
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.signInOpt, { borderColor: "#4267B2" }]}
@@ -36,7 +36,7 @@ const LoginScreen = () => {
               uri: "https://img.icons8.com/fluency/344/facebook-new.png",
             }}
           />
-          <Text style={[styles.optText, {}]}>Facebook</Text>
+          <MyText style={[styles.optText, {}]}>Facebook</MyText>
         </TouchableOpacity>
       </View>
     </SafeAreaView>

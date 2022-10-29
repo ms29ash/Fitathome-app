@@ -1,6 +1,5 @@
 import {
   StyleSheet,
-  Text,
   View,
   TouchableOpacity,
   TextInput,
@@ -9,15 +8,16 @@ import {
   StatusBar,
 } from "react-native";
 import React from "react";
+import MyText from "../components/MyText";
 
 const ForgotPasswordScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <Image style={styles.logo} source={require("../assets/logo192.png")} />
       <View style={{ width: "85%" }}>
-        <Text style={styles.heading}>Forgot Password</Text>
+        <MyText style={styles.heading}>Forgot Password</MyText>
 
-        <Text
+        <MyText
           style={{
             textAlign: "left",
             color: "#7f7f7f",
@@ -28,7 +28,7 @@ const ForgotPasswordScreen = ({ navigation }) => {
         >
           Please enter your email address to receive code to create a new
           password via email.
-        </Text>
+        </MyText>
         <TextInput
           placeholder="Email"
           autoCapitalize="none"
@@ -39,7 +39,7 @@ const ForgotPasswordScreen = ({ navigation }) => {
         />
 
         <TouchableOpacity>
-          <Text style={styles.button}>Continue</Text>
+          <MyText style={styles.button}>Continue</MyText>
         </TouchableOpacity>
 
         <View
@@ -50,9 +50,11 @@ const ForgotPasswordScreen = ({ navigation }) => {
             marginTop: 20,
           }}
         >
-          <Text>Already have an account? </Text>
+          <MyText>Already have an account? </MyText>
           <TouchableOpacity onPress={() => navigation.navigate("LoginScreen")}>
-            <Text style={{ color: "#bf0404", fontWeight: "600" }}>Sign in</Text>
+            <MyText style={{ color: "#bf0404", fontWeight: "600" }}>
+              Sign in
+            </MyText>
           </TouchableOpacity>
         </View>
       </View>

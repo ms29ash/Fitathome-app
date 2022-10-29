@@ -3,19 +3,19 @@ import {
   SafeAreaView,
   StatusBar,
   StyleSheet,
-  Text,
   TextInput,
   TouchableOpacity,
   View,
 } from "react-native";
 import React from "react";
+import MyText from "../components/MyText";
 
 const SignupScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <Image style={styles.logo} source={require("../assets/logo192.png")} />
       <View style={{ width: "85%" }}>
-        <Text style={styles.heading}>Create your{"\n"}account</Text>
+        <MyText style={styles.heading}>Create your{"\n"}account</MyText>
 
         <TextInput
           placeholder="Email"
@@ -42,9 +42,9 @@ const SignupScreen = ({ navigation }) => {
           style={styles.textInput}
         />
         <TouchableOpacity>
-          <Text style={styles.button}>Sign up</Text>
+          <MyText style={styles.button}>Sign up</MyText>
         </TouchableOpacity>
-        <Text
+        <MyText
           style={{
             textAlign: "center",
             color: "#7f7f7f",
@@ -54,7 +54,7 @@ const SignupScreen = ({ navigation }) => {
           }}
         >
           By clicking sign up you agree to the our Terms and Conditions.
-        </Text>
+        </MyText>
         <View
           style={{
             flexDirection: "row",
@@ -63,9 +63,11 @@ const SignupScreen = ({ navigation }) => {
             marginTop: 20,
           }}
         >
-          <Text>Already have an account? </Text>
+          <MyText>Already have an account? </MyText>
           <TouchableOpacity onPress={() => navigation.navigate("LoginScreen")}>
-            <Text style={{ color: "#bf0404", fontWeight: "600" }}>Sign in</Text>
+            <MyText style={{ color: "#bf0404", fontWeight: "600" }}>
+              Sign in
+            </MyText>
           </TouchableOpacity>
         </View>
       </View>

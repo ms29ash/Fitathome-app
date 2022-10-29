@@ -4,7 +4,6 @@ import {
   SafeAreaView,
   StatusBar,
   StyleSheet,
-  Text,
   TouchableOpacity,
   View,
 } from "react-native";
@@ -13,6 +12,7 @@ import React, { useState } from "react";
 import intro from "../Data/intro";
 import Dots from "../components/Intro/Dots";
 import Button from "../components/Intro/Button";
+import MyText from "../components/MyText";
 
 const FeatureScreen = ({ navigation }) => {
   const [page, setPage] = useState(0);
@@ -31,8 +31,8 @@ const FeatureScreen = ({ navigation }) => {
             start={{ x: 0, y: 0.1 }}
             end={{ x: 0, y: 0.2 }}
           >
-            <Text style={styles.title}>{intro[page].title}</Text>
-            <Text
+            <MyText style={styles.title}>{intro[page].title}</MyText>
+            <MyText
               style={{
                 color: "white",
                 marginTop: 10,
@@ -41,7 +41,7 @@ const FeatureScreen = ({ navigation }) => {
               }}
             >
               {intro[page].description}
-            </Text>
+            </MyText>
             <View style={{ height: "20%" }}>
               <View style={styles.buttons}>
                 <TouchableOpacity
@@ -88,7 +88,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   title: {
-    fontFamily: "Montserrat",
     color: "white",
     fontWeight: "800",
     fontSize: 25,
