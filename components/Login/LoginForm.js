@@ -6,8 +6,10 @@ import {
   TouchableOpacity,
 } from "react-native";
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 
 const LoginForm = () => {
+  const navigation = useNavigation();
   return (
     <View style={{ width: "85%" }}>
       <Text style={styles.heading}>Log in to your{"\n"}account</Text>
@@ -27,7 +29,11 @@ const LoginForm = () => {
         placeholder="Password"
         style={styles.textInput}
       />
-      <Text style={styles.forgotPassword}>Forgot password?</Text>
+      <TouchableOpacity
+        onPress={() => navigation.navigate("ForgotPasswordScreen")}
+      >
+        <Text style={styles.forgotPassword}>Forgot password?</Text>
+      </TouchableOpacity>
       <TouchableOpacity>
         <Text style={styles.button}>Sign in</Text>
       </TouchableOpacity>
@@ -40,7 +46,7 @@ const LoginForm = () => {
         }}
       >
         <Text>Don't have an account? </Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("SignupScreen")}>
           <Text style={{ color: "#bf0404", fontWeight: "600" }}>Signup</Text>
         </TouchableOpacity>
       </View>

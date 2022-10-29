@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import React from "react";
 
-const ForgotPasswordScreen = () => {
+const ForgotPasswordScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <Image style={styles.logo} source={require("../assets/logo192.png")} />
@@ -39,7 +39,7 @@ const ForgotPasswordScreen = () => {
         />
 
         <TouchableOpacity>
-          <Text style={styles.button}>Sign up</Text>
+          <Text style={styles.button}>Continue</Text>
         </TouchableOpacity>
 
         <View
@@ -51,7 +51,7 @@ const ForgotPasswordScreen = () => {
           }}
         >
           <Text>Already have an account? </Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate("LoginScreen")}>
             <Text style={{ color: "#bf0404", fontWeight: "600" }}>Sign in</Text>
           </TouchableOpacity>
         </View>

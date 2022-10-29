@@ -9,16 +9,7 @@ const Button = ({ type, page }) => {
         style={{
           color: "white",
           fontWeight: "800",
-          opacity:
-            type === "left"
-              ? page === 0
-                ? 0.5
-                : 1
-              : type === "right"
-              ? page === 2
-                ? 0.5
-                : 1
-              : 1,
+          opacity: type === "left" ? (page === 0 ? 0.5 : 1) : 1,
         }}
       >
         {type === "right" ? "Next" : "Prev"}

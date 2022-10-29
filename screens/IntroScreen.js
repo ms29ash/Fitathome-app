@@ -14,7 +14,7 @@ import intro from "../Data/intro";
 import Dots from "../components/Intro/Dots";
 import Button from "../components/Intro/Button";
 
-const FeatureScreen = () => {
+const FeatureScreen = ({ navigation }) => {
   const [page, setPage] = useState(0);
   return (
     <SafeAreaView style={styles.container}>
@@ -52,8 +52,11 @@ const FeatureScreen = () => {
                 </TouchableOpacity>
                 <Dots page={page} />
                 <TouchableOpacity
-                  onPress={() => setPage((page) => page + 1)}
-                  disabled={page === 2}
+                  onPress={() => {
+                    page === 2
+                      ? navigation.navigate("LoginScreen")
+                      : setPage((page) => page + 1);
+                  }}
                 >
                   <Button page={page} type={"right"} />
                 </TouchableOpacity>

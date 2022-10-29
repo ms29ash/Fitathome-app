@@ -1,8 +1,13 @@
 import { SafeAreaView, StyleSheet, Text, View, Image } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
 import { StatusBar } from "expo-status-bar";
 
-const LoadingScreen = () => {
+const LoadingScreen = ({ navigation }) => {
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.navigate("IntroScreen");
+    }, 3000);
+  }, []);
   return (
     <SafeAreaView style={styles.container}>
       <Image source={require("../assets/logo192.png")} />
