@@ -2,12 +2,23 @@ import { SafeAreaView, StyleSheet, Text, View, Image } from "react-native";
 import React, { useEffect } from "react";
 import { StatusBar } from "expo-status-bar";
 
+import { useFonts } from "expo-font";
+
 const LoadingScreen = ({ navigation }) => {
-  useEffect(() => {
+  const [loaded] = useFonts({
+    "Montserrat-Bold": require("../assets/fonts/Montserrat-Bold.ttf"),
+    "Montserrat-Medium": require("../assets/fonts/Montserrat-Medium.ttf"),
+    "Montserrat-Regular": require("../assets/fonts/Montserrat-Regular.ttf"),
+    "Montserrat-SemiBold": require("../assets/fonts/Montserrat-SemiBold.ttf"),
+  });
+  if (!loaded) {
+    return null;
+  } else {
     setTimeout(() => {
       navigation.navigate("IntroScreen");
     }, 3000);
-  }, []);
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <Image source={require("../assets/logo192.png")} />

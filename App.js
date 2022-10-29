@@ -11,18 +11,9 @@ import { useFonts } from "expo-font";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  const [loaded] = useFonts({
-    "Montserrat-Bold": require("./assets/fonts/Montserrat-Bold.ttf"),
-    "Montserrat-Medium": require("./assets/fonts/Montserrat-Medium.ttf"),
-    "Montserrat-Regular": require("./assets/fonts/Montserrat-Regular.ttf"),
-    "Montserrat-SemiBold": require("./assets/fonts/Montserrat-SemiBold.ttf"),
-  });
-  if (!loaded) {
-    return null;
-  }
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="HomeScreen">
+      <Stack.Navigator initialRouteName="LoadingScreen">
         <Stack.Screen
           name="LoadingScreen"
           component={LoadingScreen}
