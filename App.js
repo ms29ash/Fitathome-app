@@ -1,50 +1,13 @@
-import ForgotPasswordScreen from "./screens/ForgotPasswordScreen";
-import IntroScreen from "./screens/IntroScreen";
-import LoadingScreen from "./screens/LoadingScreen";
-import LoginScreen from "./screens/LoginScreen";
-import SignupScreen from "./screens/SignupScreen";
-import HomeScreen from "./screens/HomeScreen";
 import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { useFonts } from "expo-font";
-
-const Stack = createNativeStackNavigator();
+import { useState } from "react";
+import BottomTabs from "./navigation/BottomTabs";
+import Navigation from "./navigation/Navigation";
 
 export default function App() {
+  const [auth, setAuth] = useState(false);
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="LoadingScreen">
-        <Stack.Screen
-          name="LoadingScreen"
-          component={LoadingScreen}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="IntroScreen"
-          component={IntroScreen}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="LoginScreen"
-          component={LoginScreen}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="SignupScreen"
-          component={SignupScreen}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="ForgotPasswordScreen"
-          component={ForgotPasswordScreen}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="HomeScreen"
-          component={HomeScreen}
-          options={{ headerShown: false }}
-        />
-      </Stack.Navigator>
+      {auth === false ? <Navigation setAuth={setAuth} /> : <BottomTabs />}
     </NavigationContainer>
   );
 }

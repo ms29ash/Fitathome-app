@@ -11,7 +11,6 @@ import PopularChoices from "../components/Home/PopularChoices";
 import { Divider } from "@rneui/themed";
 import Category from "../components/Home/Category";
 import Recommendations from "../components/Home/Recommendations";
-import BottomTabs from "../components/Global/BottomTabs";
 
 const HomeScreen = () => {
   return (
@@ -25,7 +24,7 @@ const HomeScreen = () => {
           <Recommendations />
         </ScrollView>
       </View>
-      <BottomTabs />
+      {/* <BottomTabs /> */}
     </SafeAreaView>
   );
 };

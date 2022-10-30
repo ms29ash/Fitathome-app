@@ -1,10 +1,9 @@
 import { SafeAreaView, StyleSheet, Text, View, Image } from "react-native";
 import React, { useEffect } from "react";
 import { StatusBar } from "expo-status-bar";
-
 import { useFonts } from "expo-font";
 
-const LoadingScreen = ({ navigation }) => {
+const LoadingScreen = ({ navigation, setAuth }) => {
   const [loaded] = useFonts({
     "Montserrat-Bold": require("../assets/fonts/Montserrat-Bold.ttf"),
     "Montserrat-Medium": require("../assets/fonts/Montserrat-Medium.ttf"),
@@ -15,7 +14,8 @@ const LoadingScreen = ({ navigation }) => {
     return null;
   } else {
     setTimeout(() => {
-      navigation.navigate("IntroScreen");
+      // navigation.navigate("IntroScreen");
+      setAuth(true);
     }, 3000);
   }
 

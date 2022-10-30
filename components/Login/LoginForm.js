@@ -31,7 +31,7 @@ const LoginForm = () => {
       >
         <MyText style={styles.forgotPassword}>Forgot password?</MyText>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.navigate("HomeScreen")}>
+      <TouchableOpacity>
         <MyText fontWeight="Bold" style={styles.button}>
           Sign in
         </MyText>
