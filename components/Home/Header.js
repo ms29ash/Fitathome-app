@@ -6,7 +6,6 @@ import {
   View,
 } from "react-native";
 import React from "react";
-import Icon from "react-native-vector-icons/AntDesign";
 import OIcon from "react-native-vector-icons/Octicons";
 
 const Header = () => {
@@ -14,12 +13,8 @@ const Header = () => {
     <View style={styles.container}>
       <Image style={styles.logo} source={require("../../assets/logo512.png")} />
       <View style={styles.wrapper}>
-        <Icon name="search1" size={25} style={{ marginLeft: 5 }} />
-        <TextInput placeholder="Search" style={styles.search} />
-      </View>
-      {/* <TouchableOpacity>
         <OIcon name="filter" style={styles.filter} size={30} />
-      </TouchableOpacity> */}
+      </View>
     </View>
   );
 };
@@ -31,6 +26,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     flexDirection: "row",
     alignItems: "center",
+    justifyContent: "space-between",
   },
   logo: {
     width: "18%",
@@ -38,17 +34,7 @@ const styles = StyleSheet.create({
     marginRight: 20,
     resizeMode: "cover",
   },
-  wrapper: {
-    borderColor: "#ebebeb",
-    borderWidth: 1,
-    borderRadius: 50,
-    flexDirection: "row",
-    alignItems: "center",
-    paddingHorizontal: 5,
-    marginBottom: 15,
-    width: "78%",
-    marginRight: 10,
-  },
+  wrapper: {},
   search: {
     paddingVertical: 5,
     marginLeft: 5,
