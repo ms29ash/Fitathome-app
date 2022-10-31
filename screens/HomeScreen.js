@@ -1,20 +1,15 @@
-import {
-  StatusBar,
-  StyleSheet,
-  View,
-  SafeAreaView,
-  ScrollView,
-} from "react-native";
+import { StatusBar, StyleSheet, View, ScrollView } from "react-native";
 import React from "react";
 import Header from "../components/Home/Header";
 import PopularChoices from "../components/Home/PopularChoices";
 import { Divider } from "@rneui/themed";
 import Category from "../components/Home/Category";
 import TopPicks from "../components/Home/TopPicks";
+import SafeArea from "../components/SafeArea";
 
 const HomeScreen = () => {
   return (
-    <SafeAreaView style={styles.safeArea}>
+    <SafeArea style={styles.safeArea}>
       <View style={styles.container}>
         <Header />
         <ScrollView showsVerticalScrollIndicator={false}>
@@ -25,7 +20,7 @@ const HomeScreen = () => {
         </ScrollView>
       </View>
       {/* <BottomTabs /> */}
-    </SafeAreaView>
+    </SafeArea>
   );
 };
 

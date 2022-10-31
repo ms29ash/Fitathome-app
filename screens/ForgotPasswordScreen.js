@@ -4,15 +4,15 @@ import {
   TouchableOpacity,
   TextInput,
   Image,
-  SafeAreaView,
   StatusBar,
 } from "react-native";
 import React from "react";
 import MyText from "../components/MyText";
+import SafeArea from "../components/SafeArea";
 
 const ForgotPasswordScreen = ({ navigation }) => {
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeArea style={styles.container}>
       <Image style={styles.logo} source={require("../assets/logo192.png")} />
       <View style={{ width: "85%" }}>
         <MyText fontWeight="Bold" style={styles.heading}>
@@ -63,7 +63,7 @@ const ForgotPasswordScreen = ({ navigation }) => {
         </View>
       </View>
       <View style={{ height: "20%" }}></View>
-    </SafeAreaView>
+    </SafeArea>
   );
 };
 

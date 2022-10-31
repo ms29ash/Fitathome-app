@@ -1,4 +1,4 @@
-import { SafeAreaView, StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 import React, { useEffect } from "react";
 import { StatusBar } from "expo-status-bar";
 import { useFonts } from "expo-font";
@@ -20,7 +20,7 @@ const LoadingScreen = ({ navigation, setAuth }) => {
   }
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeArea style={styles.container}>
       <Image
         style={{ width: 220, height: 120, resizeMode: "contain" }}
         source={require("../assets/logo192.png")}
@@ -29,7 +29,7 @@ const LoadingScreen = ({ navigation, setAuth }) => {
         style={{ width: 80, height: 30 }}
         source={require("../assets/spinner.gif")}
       />
-    </SafeAreaView>
+    </SafeArea>
   );
 };
 

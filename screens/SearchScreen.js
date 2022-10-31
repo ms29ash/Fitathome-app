@@ -2,7 +2,6 @@ import {
   StyleSheet,
   TextInput,
   View,
-  SafeAreaView,
   StatusBar,
   TouchableOpacity,
   Image,
@@ -14,7 +13,8 @@ import OIcon from "react-native-vector-icons/Octicons";
 import Icon from "react-native-vector-icons/AntDesign";
 import Heading from "../components/Home/Heading";
 import MyText from "../components/MyText";
-// import { MaterialCommunityIcons } from "@expo/vector-icons";
+import SafeArea from "../components/SafeArea";
+
 const recent = [
   "Chicken",
   "Mutton",
@@ -50,7 +50,7 @@ const trending = [
 ];
 const SearchScreen = () => {
   return (
-    <SafeAreaView style={styles.safeArea}>
+    <SafeArea style={styles.safeArea}>
       <View style={styles.container}>
         <View style={styles.wrapper}>
           <Icon
@@ -99,7 +99,7 @@ const SearchScreen = () => {
           </TouchableOpacity>
         ))}
       </ScrollView>
-    </SafeAreaView>
+    </SafeArea>
   );
 };
 

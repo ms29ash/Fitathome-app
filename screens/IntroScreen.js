@@ -1,6 +1,5 @@
 import {
   ImageBackground,
-  SafeAreaView,
   StatusBar,
   StyleSheet,
   TouchableOpacity,
@@ -16,7 +15,7 @@ import MyText from "../components/MyText";
 const FeatureScreen = ({ navigation }) => {
   const [page, setPage] = useState(0);
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeArea style={styles.container}>
       <ImageBackground
         resizeMode="cover"
         style={{ flex: 1, height: "80%" }}
@@ -66,7 +65,7 @@ const FeatureScreen = ({ navigation }) => {
           </LinearGradient>
         </View>
       </ImageBackground>
-    </SafeAreaView>
+    </SafeArea>
   );
 };
 

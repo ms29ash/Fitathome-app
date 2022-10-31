@@ -1,11 +1,12 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
+import SafeArea from "../components/SafeArea";
 
 const ProfileScreen = () => {
   return (
-    <View>
+    <SafeArea>
       <Text>ProfileScreen</Text>
-    </View>
+    </SafeArea>
   );
 };
 

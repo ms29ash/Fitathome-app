@@ -1,19 +1,18 @@
 import {
   Image,
-  SafeAreaView,
   StatusBar,
   StyleSheet,
-  TextInput,
   TouchableOpacity,
   View,
 } from "react-native";
 import React from "react";
 import LoginForm from "../components/Login/LoginForm";
 import MyText from "../components/MyText";
+import SafeArea from "../components/SafeArea";
 
 const LoginScreen = () => {
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeArea style={styles.container}>
       <Image style={styles.logo} source={require("../assets/logo192.png")} />
 
       <LoginForm />
@@ -43,7 +42,7 @@ const LoginScreen = () => {
           </MyText>
         </TouchableOpacity>
       </View>
-    </SafeAreaView>
+    </SafeArea>
   );
 };
 

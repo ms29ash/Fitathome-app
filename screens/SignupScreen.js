@@ -1,6 +1,5 @@
 import {
   Image,
-  SafeAreaView,
   StatusBar,
   StyleSheet,
   TextInput,
@@ -9,10 +8,11 @@ import {
 } from "react-native";
 import React from "react";
 import MyText from "../components/MyText";
+import SafeArea from "../components/SafeArea";
 
 const SignupScreen = ({ navigation }) => {
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeArea style={styles.container}>
       <Image style={styles.logo} source={require("../assets/logo192.png")} />
       <View style={{ width: "85%" }}>
         <MyText fontWeight="Bold" style={styles.heading}>
@@ -75,7 +75,7 @@ const SignupScreen = ({ navigation }) => {
           </TouchableOpacity>
         </View>
       </View>
-    </SafeAreaView>
+    </SafeArea>
   );
 };
 
