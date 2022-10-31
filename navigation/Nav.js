@@ -1,4 +1,5 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import PersonalInformationScreen from "../screens/PersonalInformationScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import BottomTabs from "./BottomTabs";
 
@@ -15,6 +16,11 @@ const Nav = ({}) => {
       <Stack.Screen
         name="Profile"
         component={ProfileScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="PersonalImformation"
+        component={PersonalInformationScreen}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

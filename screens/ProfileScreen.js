@@ -10,17 +10,17 @@ import BackButton from "../components/BackButton";
 import { useNavigation } from "@react-navigation/native";
 
 const options = [
-  "Personal Information",
-  "Payments",
-  "Delivery Address",
-  "Order History",
-  "Settings",
+  { navigate: "PersonalImformation", title: "Personal Information" },
+  { navigate: "PersonalImformation", title: "Payments" },
+  { navigate: "PersonalImformation", title: "Delivery Address" },
+  { navigate: "PersonalImformation", title: "Order History" },
+  { navigate: "PersonalImformation", title: "Settings" },
 ];
 const ProfileScreen = () => {
   const navigation = useNavigation();
   return (
     <SafeArea>
-      <BackButton onPress={() => navigation.goBack()} style={styles.backBtn} />
+      <BackButton style={styles.backBtn} />
       <View style={styles.header}>
         <View>
           <Image
@@ -41,7 +41,12 @@ const ProfileScreen = () => {
       </View>
       <View style={styles.main}>
         {options.map((item, index) => (
-          <Option key={index}>{item}</Option>
+          <Option
+            key={index}
+            onPress={() => navigation.navigate(item.navigate)}
+          >
+            {item.title}
+          </Option>
         ))}
         <TouchableOpacity style={styles.signOut}>
           <Ionicons name="exit" size={24} color="black" />
@@ -95,22 +100,5 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     borderRadius: 40,
   },
-  backBtn: {
-    position: "absolute",
-    top: 15,
-    left: 20,
-    zIndex: 10,
-    backgroundColor: "#fff",
-    padding: 8,
-    borderRadius: 50,
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.23,
-    shadowRadius: 2.62,
-
-    elevation: 4,
-  },
+  backBtn: {},
 });

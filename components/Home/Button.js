@@ -3,10 +3,10 @@ import React from "react";
 import MyText from "../MyText";
 import Icon from "react-native-vector-icons/AntDesign";
 
-const Button = ({ style, txtStyle, color, text }) => {
+const Button = ({ style, txtStyle, color, children }) => {
   return (
     <TouchableOpacity style={[styles.container, style]}>
-      {!text ? (
+      {!children ? (
         <>
           <Icon name="plus" color={color ? color : "#fff"} size={20} />
           <MyText fontWeight="SemiBold" style={[{ color: "white" }, txtStyle]}>
@@ -15,7 +15,7 @@ const Button = ({ style, txtStyle, color, text }) => {
         </>
       ) : (
         <MyText fontWeight="SemiBold" style={[{ color: "white" }, txtStyle]}>
-          {text}
+          {children}
         </MyText>
       )}
     </TouchableOpacity>
