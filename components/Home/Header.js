@@ -6,15 +6,31 @@ import {
   View,
 } from "react-native";
 import React from "react";
-import OIcon from "react-native-vector-icons/Octicons";
-
+import IIcon from "react-native-vector-icons/Ionicons";
+import MyText from "../MyText";
 const Header = () => {
   return (
     <View style={styles.container}>
-      <Image style={styles.logo} source={require("../../assets/logo512.png")} />
-      <View style={styles.wrapper}>
-        <OIcon name="filter" style={styles.filter} size={30} />
+      <View style={styles.address}>
+        <View style={styles.location}>
+          <IIcon name="location-sharp" size={25} color="#fff" />
+        </View>
+        <View>
+          <MyText fontWeight="Bold">Home</MyText>
+          <MyText style={{ fontSize: 12 }}>
+            Mall road, Masoorie, Uttarakhand
+          </MyText>
+        </View>
       </View>
+
+      <TouchableOpacity>
+        <Image
+          style={styles.profile}
+          source={{
+            uri: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+          }}
+        />
+      </TouchableOpacity>
     </View>
   );
 };
@@ -27,21 +43,32 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
+    marginBottom: 10,
   },
-  logo: {
-    width: "18%",
-    height: 40,
-    marginRight: 20,
-    resizeMode: "cover",
+  address: {
+    flexDirection: "row",
+    width: "75%",
+    alignItems: "center",
   },
-  wrapper: {},
+  location: {
+    backgroundColor: "#bf0404",
+    width: 35,
+    height: 35,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 30,
+    marginRight: 5,
+  },
   search: {
     paddingVertical: 5,
     marginLeft: 5,
     color: "black",
     fontSize: 15,
   },
-  filter: {
-    marginBottom: 10,
+  profile: {
+    width: 45,
+    height: 45,
+    resizeMode: "cover",
+    borderRadius: 40,
   },
 });
