@@ -12,6 +12,7 @@ import React from "react";
 import { Entypo } from "@expo/vector-icons";
 import OIcon from "react-native-vector-icons/Octicons";
 import Icon from "react-native-vector-icons/AntDesign";
+import Heading from "../components/Home/Heading";
 import MyText from "../components/MyText";
 // import { MaterialCommunityIcons } from "@expo/vector-icons";
 const recent = [
@@ -23,12 +24,8 @@ const recent = [
   "Butter",
   "Chips",
   "Chicken",
-  "Mutton",
-  "Protein",
-  "Oatmeal",
-  "Fruits",
-  "Butter",
-  "Chips",
+];
+const trending = [
   "Chicken",
   "Mutton",
   "Protein",
@@ -77,8 +74,9 @@ const SearchScreen = () => {
         </TouchableOpacity>
       </View>
       <ScrollView style={styles.recentSearch}>
+        <Heading>Recently searched</Heading>
         {recent.map((item, index) => (
-          <View style={styles.recent} key={index}>
+          <TouchableOpacity style={styles.recent} key={index}>
             <Image
               style={{ width: 24, height: 24, marginRight: 10 }}
               source={{
@@ -86,7 +84,19 @@ const SearchScreen = () => {
               }}
             />
             <MyText>{item}</MyText>
-          </View>
+          </TouchableOpacity>
+        ))}
+        <Heading>Trending</Heading>
+        {trending.map((item, index) => (
+          <TouchableOpacity style={styles.recent} key={index}>
+            <Image
+              style={{ width: 24, height: 24, marginRight: 10 }}
+              source={{
+                uri: "https://img.icons8.com/external-creatype-outline-colourcreatype/344/external-arrow-essential-ui-v3-creatype-outline-colourcreatype-2.png",
+              }}
+            />
+            <MyText>{item}</MyText>
+          </TouchableOpacity>
         ))}
       </ScrollView>
     </SafeAreaView>
