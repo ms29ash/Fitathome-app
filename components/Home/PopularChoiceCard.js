@@ -2,6 +2,8 @@ import { StyleSheet, View, Image } from "react-native";
 import React from "react";
 import MyText from "../MyText";
 import Icon from "react-native-vector-icons/AntDesign";
+import Button from "./Button";
+import Type from "./Type";
 
 const PopularChoiceCard = ({ item }) => {
   return (
@@ -12,13 +14,19 @@ const PopularChoiceCard = ({ item }) => {
           uri: item.image,
         }}
       />
+      <Button style={styles.button} />
       <MyText style={styles.title}>{item?.name}</MyText>
       <View style={styles.details}>
-        <MyText style={{ marginRight: 10, fontSize: 13 }}>&#8377; 200</MyText>
+        <MyText style={{ marginRight: 10, fontSize: 13 }}>
+          &#8377; {item.price}
+        </MyText>
         <View style={styles.star}>
           <Icon name="star" size={15} color="#bf0404" />
-          <MyText style={{ fontSize: 13 }}>4.3</MyText>
+          <MyText style={{ fontSize: 13, marginLeft: 5 }}>
+            {item.ratings}
+          </MyText>
         </View>
+        <Type type={item.type} style={{ marginLeft: 10 }} />
       </View>
     </View>
   );
@@ -27,7 +35,11 @@ const PopularChoiceCard = ({ item }) => {
 export default PopularChoiceCard;
 
 const styles = StyleSheet.create({
-  card: {},
+  button: {
+    position: "absolute",
+    right: 10,
+    bottom: 60,
+  },
   image: {
     width: 250,
     marginRight: 10,
