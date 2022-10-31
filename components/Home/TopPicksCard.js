@@ -7,54 +7,24 @@ import {
   View,
 } from "react-native";
 import React from "react";
-import items from "../../Data/items";
 import MyText from "../MyText";
 import { Divider } from "@rneui/themed";
 import Icon from "react-native-vector-icons/AntDesign";
-const icon = [
-  {
-    name: "Veg",
-    image: "https://img.icons8.com/color/344/vegetarian-food-symbol.png",
-  },
-  {
-    name: "Non-Veg",
-    image: "https://img.icons8.com/color/344/non-vegetarian-food-symbol.png",
-  },
-  {
-    name: "Vegan",
-    image: "https://img.icons8.com/color/344/vegetarian-mark.png",
-  },
-];
+import Type from "./Type";
+import Button from "./Button";
 
-const RecommendationCard = ({ item }) => {
+const TopPicksCard = ({ item }) => {
   return (
     <>
       <View style={styles.container}>
+        <Button style={styles.button} color="#000" txtStyle={styles.btnText} />
         <Image style={styles.image} source={{ uri: item.image }} />
         <View style={styles.wrapper}>
-          <MyText fontWeight="Medium" style={styles.name} numberOfLines={2}>
+          <MyText fontWeight="SemiBold" style={styles.name} numberOfLines={2}>
             {item.name}
           </MyText>
 
-          <View style={styles.type}>
-            <Image
-              style={{ width: 20, height: 20 }}
-              source={{
-                uri:
-                  item.type === "Veg"
-                    ? icon[0].image
-                    : item.type === "Non-Veg"
-                    ? icon[1].image
-                    : icon[2].image,
-              }}
-            />
-            <Text
-              fontWeight="Regular"
-              style={{ color: "#393939", fontRight: 10, fontSize: 12 }}
-            >
-              {item.type}
-            </Text>
-          </View>
+          <Type type={item.type} />
 
           <View style={styles.details}>
             <MyText style={styles.price}>&#8377;{item.price}</MyText>
@@ -80,19 +50,20 @@ const RecommendationCard = ({ item }) => {
   );
 };
 
-export default RecommendationCard;
+export default TopPicksCard;
 
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     marginBottom: 5,
+    width: "90%",
   },
   image: {
-    width: "40%",
-    height: 110,
+    width: "35%",
+    borderRadius: 10,
+    height: 100,
     marginRight: 10,
     resizeMode: "cover",
-    borderRadius: 10,
   },
   wrapper: {
     width: "55%",
@@ -115,10 +86,17 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
   },
-  type: {
+  button: {
+    position: "absolute",
+    bottom: 0,
+    right: -25,
+    width: 70,
+    height: 40,
+    backgroundColor: "#f2f2f2",
+    borderRadius: 30,
+  },
+  btnText: {
     fontSize: 12,
-    flexDirection: "row",
-    alignItems: "center",
-    marginVertical: 10,
+    color: "#000",
   },
 });

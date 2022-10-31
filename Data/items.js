@@ -29,7 +29,7 @@ const items = [
     _id: {
       $oid: "621e58775b7e90e4525f07c0",
     },
-    name: "30-Minute Chicken Tikka Masala",
+    name: "Chicken Tikka Masala",
     type: "Non-Veg",
     description:
       "Sometimes you just need something quick and easy to rely on, right? This incredible chicken tikka masala is rich, creamy, and delicious   the ideal lunch to look forward to.",
