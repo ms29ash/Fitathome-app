@@ -66,8 +66,8 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   profile: {
-    width: 45,
-    height: 45,
+    width: 40,
+    height: 40,
     resizeMode: "cover",
     borderRadius: 40,
   },

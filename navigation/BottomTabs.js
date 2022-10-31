@@ -2,6 +2,8 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { AntDesign } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
+import { MaterialIcons } from "@expo/vector-icons";
+import { Feather } from "@expo/vector-icons";
 import HomeScreen from "../screens/HomeScreen";
 import SearchScreen from "../screens/SearchScreen";
 import DemoScreen from "../screens/DemoScreen";
@@ -52,12 +54,24 @@ export default function BottomTabs() {
         tabBarIconStyle={styles.icon}
       />
       <Tab.Screen
-        name="Profile"
+        name="Track"
         component={ProfileScreen}
         options={{
-          tabBarLabel: "Profile",
+          tabBarLabel: "Track",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="person-outline" color={color} size={size} />
+            <MaterialIcons name="track-changes" color={color} size={size} />
+          ),
+          headerShown: false,
+        }}
+        tabBarIconStyle={styles.icon}
+      />
+      <Tab.Screen
+        name="Cart"
+        component={ProfileScreen}
+        options={{
+          tabBarLabel: "Cart",
+          tabBarIcon: ({ color, size }) => (
+            <Feather name="shopping-bag" color={color} size={size} />
           ),
           headerShown: false,
         }}
@@ -73,12 +87,12 @@ const styles = StyleSheet.create({
     tabBarShowLabel: false,
     tabBarStyle: {
       backgroundColor: "#fff",
-      position: "absolute",
+      // position: "absolute",
       height: 55,
-      bottom: 10,
-      left: 15,
-      right: 15,
+      bottom: 5,
+      width: "95%",
       borderRadius: 30,
+      marginLeft: "2.5%",
       shadowColor: "#000",
       shadowOffset: {
         width: 0,

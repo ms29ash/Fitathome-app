@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     right: 10,
     bottom: 60,
+    borderBottomRightRadius: 10,
   },
   image: {
     width: 250,
