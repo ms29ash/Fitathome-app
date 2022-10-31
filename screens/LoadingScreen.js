@@ -21,9 +21,12 @@ const LoadingScreen = ({ navigation, setAuth }) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Image source={require("../assets/logo192.png")} />
       <Image
-        style={{ width: 100, height: 40 }}
+        style={{ width: 220, height: 120, resizeMode: "contain" }}
+        source={require("../assets/logo192.png")}
+      />
+      <Image
+        style={{ width: 80, height: 30 }}
         source={require("../assets/spinner.gif")}
       />
     </SafeAreaView>
