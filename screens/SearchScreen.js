@@ -59,7 +59,12 @@ const SearchScreen = () => {
             color="#292929"
             style={{ marginLeft: 5 }}
           />
-          <TextInput placeholder="Search" style={styles.search} />
+          <TextInput
+            placeholder="Search"
+            autoFocus={true}
+            autoCapitalize="none"
+            style={styles.search}
+          />
           <TouchableOpacity>
             <Entypo name="circle-with-cross" size={24} color="#292929" />
           </TouchableOpacity>
@@ -74,7 +79,7 @@ const SearchScreen = () => {
         </TouchableOpacity>
       </View>
       <ScrollView style={styles.recentSearch}>
-        <Heading>Recently searched</Heading>
+        <Heading style={{ marginTop: 0 }}>Recently searched</Heading>
         {recent.map((item, index) => (
           <TouchableOpacity style={styles.recent} key={index}>
             <Image
@@ -109,6 +114,7 @@ const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
     marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    backgroundColor: "#ffffff",
   },
   container: {
     flexDirection: "row",
@@ -123,11 +129,13 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     alignItems: "center",
     width: "90%",
+    borderColor: "#f2f2f2",
+    borderWidth: 1,
   },
   search: {
     width: "80%",
     marginLeft: 5,
-    paddingVertical: 5,
+    paddingVertical: 3,
   },
   filter: {
     marginLeft: 5,

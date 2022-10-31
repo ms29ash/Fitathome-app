@@ -18,7 +18,7 @@ export default function BottomTabs() {
   return (
     <Tab.Navigator initialRouteName="Home" screenOptions={styles.tabs}>
       <Tab.Screen
-        name="Home"
+        name="HomeScreen"
         component={HomeScreen}
         options={{
           tabBarLabel: "Home",

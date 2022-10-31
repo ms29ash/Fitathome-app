@@ -8,7 +8,9 @@ import {
 import React from "react";
 import IIcon from "react-native-vector-icons/Ionicons";
 import MyText from "../MyText";
+import { useNavigation } from "@react-navigation/native";
 const Header = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <View style={styles.address}>
@@ -23,7 +25,7 @@ const Header = () => {
         </View>
       </View>
 
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("Profile")}>
         <Image
           style={styles.profile}
           source={{

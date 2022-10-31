@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, Image } from "react-native";
 import React, { useEffect } from "react";
 import { StatusBar } from "expo-status-bar";
 import { useFonts } from "expo-font";
+import SafeArea from "../components/SafeArea";
 
 const LoadingScreen = ({ navigation, setAuth }) => {
   const [loaded] = useFonts({

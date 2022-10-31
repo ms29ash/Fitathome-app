@@ -1,13 +1,19 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { useState } from "react";
-import BottomTabs from "./navigation/BottomTabs";
-import Navigation from "./navigation/Navigation";
+import AuthNavigation from "./navigation/AuthNavigation";
+import Nav from "./navigation/Nav";
 
 export default function App() {
   const [auth, setAuth] = useState(false);
   return (
     <NavigationContainer>
-      {auth === false ? <Navigation setAuth={setAuth} /> : <BottomTabs />}
+      {auth === false ? (
+        <AuthNavigation setAuth={setAuth} />
+      ) : (
+        <>
+          <Nav />
+        </>
+      )}
     </NavigationContainer>
   );
 }

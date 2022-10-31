@@ -7,7 +7,7 @@ import SignupScreen from "../screens/SignupScreen";
 
 const Stack = createNativeStackNavigator();
 
-const Navigation = ({ setAuth }) => {
+const AuthNavigation = ({ setAuth }) => {
   return (
     <Stack.Navigator initialRouteName="LoadingScreen">
       <Stack.Screen name="LoadingScreen" options={{ headerShown: false }}>
@@ -37,4 +37,4 @@ const Navigation = ({ setAuth }) => {
   );
 };
 
-export default Navigation;
+export default AuthNavigation;
