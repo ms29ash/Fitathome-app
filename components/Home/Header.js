@@ -10,6 +10,9 @@ import IIcon from "react-native-vector-icons/Ionicons";
 import MyText from "../MyText";
 import RText from "../RText";
 import { useNavigation } from "@react-navigation/native";
+import { Ionicons } from "@expo/vector-icons";
+import { Entypo } from "@expo/vector-icons";
+
 const Header = () => {
   const navigation = useNavigation();
   return (
@@ -19,7 +22,12 @@ const Header = () => {
           <IIcon name="location-sharp" size={25} color="#fff" />
         </View>
         <View>
-          <MyText fontWeight="Bold">Home</MyText>
+          <View style={{ flexDirection: "row", alignItems: "center" }}>
+            <MyText fontWeight="Bold" style={{ marginRight: 2 }}>
+              Home
+            </MyText>
+            <Entypo name="chevron-down" size={24} color="black" />
+          </View>
           <RText style={{ fontSize: 12 }}>
             Mall road, Masoorie, Uttarakhand
           </RText>
@@ -27,12 +35,10 @@ const Header = () => {
       </View>
 
       <TouchableOpacity onPress={() => navigation.navigate("Profile")}>
-        <Image
-          style={styles.profile}
-          source={{
-            uri: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-          }}
-        />
+        <Ionicons name="md-notifications-sharp" size={30} color="black" />
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("Cart")}>
+        <Ionicons name="ios-cart" size={30} color="black" />
       </TouchableOpacity>
     </View>
   );

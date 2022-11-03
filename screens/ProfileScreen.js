@@ -20,7 +20,6 @@ const ProfileScreen = () => {
   const navigation = useNavigation();
   return (
     <SafeArea>
-      <BackButton style={styles.backBtn} />
       <View style={styles.header}>
         <View>
           <Image

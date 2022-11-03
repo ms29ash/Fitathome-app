@@ -66,12 +66,12 @@ export default function BottomTabs() {
         tabBarIconStyle={styles.icon}
       />
       <Tab.Screen
-        name="Cart"
+        name="Profile"
         component={ProfileScreen}
         options={{
           tabBarLabel: "Cart",
           tabBarIcon: ({ color, size }) => (
-            <Feather name="shopping-bag" color={color} size={size} />
+            <Ionicons name="person-outline" color={color} size={size} />
           ),
           headerShown: false,
         }}

@@ -1,4 +1,5 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import CartScreen from "../screens/CartScreen";
 import PersonalInformationScreen from "../screens/PersonalInformationScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import BottomTabs from "./BottomTabs";
@@ -23,6 +24,7 @@ const Nav = ({}) => {
         component={PersonalInformationScreen}
         options={{ headerShown: false }}
       />
+      <Stack.Screen name="Cart" component={CartScreen} />
     </Stack.Navigator>
   );
 };
