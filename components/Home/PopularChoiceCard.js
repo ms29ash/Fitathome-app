@@ -1,6 +1,7 @@
 import { StyleSheet, View, Image } from "react-native";
 import React from "react";
 import MyText from "../MyText";
+import RText from "../RText";
 import Icon from "react-native-vector-icons/AntDesign";
 import Button from "./Button";
 import Type from "./Type";
@@ -17,14 +18,12 @@ const PopularChoiceCard = ({ item }) => {
       <Button style={styles.button} />
       <MyText style={styles.title}>{item?.name}</MyText>
       <View style={styles.details}>
-        <MyText style={{ marginRight: 10, fontSize: 13 }}>
+        <RText style={{ marginRight: 10, fontSize: 13 }}>
           &#8377; {item.price}
-        </MyText>
+        </RText>
         <View style={styles.star}>
           <Icon name="star" size={15} color="#bf0404" />
-          <MyText style={{ fontSize: 13, marginLeft: 5 }}>
-            {item.ratings}
-          </MyText>
+          <RText style={{ fontSize: 13, marginLeft: 5 }}>{item.ratings}</RText>
         </View>
         <Type type={item.type} style={{ marginLeft: 10 }} />
       </View>

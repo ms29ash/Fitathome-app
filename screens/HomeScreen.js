@@ -6,6 +6,7 @@ import { Divider } from "@rneui/themed";
 import Category from "../components/Home/Category";
 import TopPicks from "../components/Home/TopPicks";
 import SafeArea from "../components/SafeArea";
+import ProteinTracker from "../components/Home/ProteinTracker";
 
 const HomeScreen = () => {
   return (
@@ -13,6 +14,7 @@ const HomeScreen = () => {
       <View style={styles.container}>
         <Header />
         <ScrollView showsVerticalScrollIndicator={false}>
+          <ProteinTracker />
           <PopularChoices />
           <Divider color="#f2f2f2" orientation="horizontal" width={1} />
           <Category />

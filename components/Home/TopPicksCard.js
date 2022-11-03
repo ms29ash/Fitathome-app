@@ -12,6 +12,7 @@ import { Divider } from "@rneui/themed";
 import Icon from "react-native-vector-icons/AntDesign";
 import Type from "./Type";
 import Button from "./Button";
+import RText from "../RText";
 
 const TopPicksCard = ({ item }) => {
   return (
@@ -27,7 +28,7 @@ const TopPicksCard = ({ item }) => {
           <Type type={item.type} />
 
           <View style={styles.details}>
-            <MyText style={styles.price}>&#8377;{item.price}</MyText>
+            <RText style={styles.price}>&#8377;{item.price}</RText>
             <View style={styles.star}>
               <Icon
                 style={{ marginRight: 5 }}
@@ -35,7 +36,7 @@ const TopPicksCard = ({ item }) => {
                 size={15}
                 color="#bf0404"
               />
-              <MyText style={{ fontSize: 12 }}>{item.ratings}</MyText>
+              <RText style={{ fontSize: 12 }}>{item.ratings}</RText>
             </View>
           </View>
         </View>

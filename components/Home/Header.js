@@ -8,6 +8,7 @@ import {
 import React from "react";
 import IIcon from "react-native-vector-icons/Ionicons";
 import MyText from "../MyText";
+import RText from "../RText";
 import { useNavigation } from "@react-navigation/native";
 const Header = () => {
   const navigation = useNavigation();
@@ -19,9 +20,9 @@ const Header = () => {
         </View>
         <View>
           <MyText fontWeight="Bold">Home</MyText>
-          <MyText style={{ fontSize: 12 }}>
+          <RText style={{ fontSize: 12 }}>
             Mall road, Masoorie, Uttarakhand
-          </MyText>
+          </RText>
         </View>
       </View>
 

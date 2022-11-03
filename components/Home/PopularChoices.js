@@ -1,7 +1,7 @@
 import { ScrollView, StyleSheet, View, TouchableOpacity } from "react-native";
 import React from "react";
 import { popularItems } from "../../Data/items";
-import MyText from "../MyText";
+import RText from "../RText";
 import PopularChoiceCard from "./PopularChoiceCard";
 import Heading from "./Heading";
 
@@ -11,7 +11,7 @@ const PopularChoices = () => {
       <View style={styles.header}>
         <Heading style={styles.head}>Popular Choices</Heading>
         <TouchableOpacity>
-          <MyText>show all</MyText>
+          <RText>show all</RText>
         </TouchableOpacity>
       </View>
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>

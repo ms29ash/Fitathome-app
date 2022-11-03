@@ -1,6 +1,6 @@
 import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
 import React from "react";
-import MyText from "../MyText";
+import RText from "../RText";
 import Heading from "./Heading";
 
 const category = [
@@ -38,9 +38,9 @@ const Category = () => {
                 uri: item.image,
               }}
             />
-            <MyText fontWeight="SemiBold" style={styles.text}>
+            <RText fontWeight="Bold" style={styles.text}>
               {item.name}
-            </MyText>
+            </RText>
           </TouchableOpacity>
         ))}
       </View>

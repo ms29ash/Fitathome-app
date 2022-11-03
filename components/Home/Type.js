@@ -1,6 +1,6 @@
 import { StyleSheet, Image, View } from "react-native";
 import React from "react";
-import MyText from "../MyText";
+import RText from "../RText";
 
 const icon = [
   {
@@ -31,12 +31,12 @@ const Type = ({ type, style }) => {
               : icon[2].image,
         }}
       />
-      <MyText
+      <RText
         fontWeight="Regular"
         style={{ color: "#393939", fontRight: 10, fontSize: 12 }}
       >
         {type}
-      </MyText>
+      </RText>
     </View>
   );
 };
